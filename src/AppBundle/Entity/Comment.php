@@ -38,7 +38,7 @@ class Comment
     /**
      * @var
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="comment")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="comments")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      *
      */
@@ -47,7 +47,7 @@ class Comment
     /**
      * @var
      *
-     * @ORM\ManyToOne(targetEntity="Advertisement", inversedBy="comment")
+     * @ORM\ManyToOne(targetEntity="Advertisement", inversedBy="comments")
      * @ORM\JoinColumn(name="advertisement_id", referencedColumnName="id")
      */
     private $advertisement;

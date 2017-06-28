@@ -34,7 +34,7 @@ class Picture
      * @ORM\OneToOne(targetEntity="Advertisement", inversedBy="picture")
      * @ORM\JoinColumn(name="advertisement_id", referencedColumnName="id")
      */
-    private $adevrtisement;
+    private $advertisement;
 
 
     /**
@@ -91,5 +91,28 @@ class Picture
     public function getAdevrtisement()
     {
         return $this->adevrtisement;
+    }
+
+    /**
+     * Set advertisement
+     *
+     * @param \AppBundle\Entity\Advertisement $advertisement
+     * @return Picture
+     */
+    public function setAdvertisement(\AppBundle\Entity\Advertisement $advertisement = null)
+    {
+        $this->advertisement = $advertisement;
+
+        return $this;
+    }
+
+    /**
+     * Get advertisement
+     *
+     * @return \AppBundle\Entity\Advertisement 
+     */
+    public function getAdvertisement()
+    {
+        return $this->advertisement;
     }
 }

@@ -19,5 +19,15 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * @Route("/add")
+     */
+    public function addExampleAddAction()
+    {
+
+        return $this->render('default/add_example_action.html.twig',
+            ['msg' => 'poszło spoko']);
+    }
+
 
 }
