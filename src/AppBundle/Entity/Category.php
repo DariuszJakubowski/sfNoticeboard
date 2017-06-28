@@ -31,7 +31,7 @@ class Category
 
     /**
      * @var
-     * @ORM\OneToMany(targetEntity="Advertisement", mappedBy="category")
+     * @ORM\ManyToMany(targetEntity="Advertisement", mappedBy="category")
      */
     private $advertisements;
 

@@ -53,10 +53,10 @@ class Advertisement
     /**
      * @var
      *
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="advertisements")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Category", inversedBy="advertisements")
+     * @ORM\JoinTable(name="advertisements_categories")
      */
-    private $category;
+    private $categories;
 
     /**
      * @var
@@ -82,11 +82,11 @@ class Advertisement
     private $picture;
 
 
-
     public function __construct()
     {
         $this->created_at = new \DateTime('now');
         $this->comments = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
 
@@ -292,5 +292,38 @@ class Advertisement
     public function getPicture()
     {
         return $this->picture;
+    }
+
+    /**
+     * Add categories
+     *
+     * @param \AppBundle\Entity\Category $categories
+     * @return Advertisement
+     */
+    public function addCategory(\AppBundle\Entity\Category $categories)
+    {
+        $this->categories[] = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Remove categories
+     *
+     * @param \AppBundle\Entity\Category $categories
+     */
+    public function removeCategory(\AppBundle\Entity\Category $categories)
+    {
+        $this->categories->removeElement($categories);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 }
