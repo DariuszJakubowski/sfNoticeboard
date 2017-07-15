@@ -12,6 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 /**
  * Category controller.
  *
+ * Only admin user can add, edit and delete categories
  * @Security("has_role('ROLE_ADMIN')")
  * @Route("category")
  */

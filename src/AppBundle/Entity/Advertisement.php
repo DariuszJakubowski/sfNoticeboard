@@ -5,7 +5,6 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="advertisement")
@@ -93,7 +92,7 @@ class Advertisement
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -116,7 +115,7 @@ class Advertisement
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -139,7 +138,7 @@ class Advertisement
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -162,7 +161,7 @@ class Advertisement
     /**
      * Get created_at
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -185,7 +184,7 @@ class Advertisement
     /**
      * Get expiration_date
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getExpirationDate()
     {
@@ -208,7 +207,7 @@ class Advertisement
     /**
      * Get category
      *
-     * @return \AppBundle\Entity\Category 
+     * @return \AppBundle\Entity\Category
      */
     public function getCategory()
     {
@@ -231,7 +230,7 @@ class Advertisement
     /**
      * Get user
      *
-     * @return \AppBundle\Entity\User 
+     * @return \AppBundle\Entity\User
      */
     public function getUser()
     {
@@ -264,7 +263,7 @@ class Advertisement
     /**
      * Get comments
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getComments()
     {
@@ -287,7 +286,7 @@ class Advertisement
     /**
      * Get picture
      *
-     * @return \AppBundle\Entity\Picture 
+     * @return \AppBundle\Entity\Picture
      */
     public function getPicture()
     {
@@ -320,7 +319,7 @@ class Advertisement
     /**
      * Get categories
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getCategories()
     {

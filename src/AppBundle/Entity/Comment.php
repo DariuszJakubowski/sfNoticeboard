@@ -61,7 +61,7 @@ class Comment
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -84,7 +84,7 @@ class Comment
     /**
      * Get text
      *
-     * @return string 
+     * @return string
      */
     public function getText()
     {
@@ -107,7 +107,7 @@ class Comment
     /**
      * Get created_at
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -130,7 +130,7 @@ class Comment
     /**
      * Get user
      *
-     * @return \AppBundle\Entity\User 
+     * @return \AppBundle\Entity\User
      */
     public function getUser()
     {
@@ -153,7 +153,7 @@ class Comment
     /**
      * Get advertisement
      *
-     * @return \AppBundle\Entity\Advertisement 
+     * @return \AppBundle\Entity\Advertisement
      */
     public function getAdvertisement()
     {

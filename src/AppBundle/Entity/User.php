@@ -37,7 +37,6 @@ class User extends BaseUser
         parent::__construct();
         $this->advertisements = new ArrayCollection();
         $this->comments = new ArrayCollection();
-
     }
 
     /**
@@ -66,7 +65,7 @@ class User extends BaseUser
     /**
      * Get advertisements
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getAdvertisements()
     {
@@ -99,7 +98,7 @@ class User extends BaseUser
     /**
      * Get comments
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getComments()
     {

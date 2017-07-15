@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Advertisements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Created_at</th>
+                <th>Expiration_date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for advertisement in advertisements %}
+            <tr>
+                <td><a href="{{ path('advertisement_show', { 'id': advertisement.id }) }}">{{ advertisement.id }}</a></td>
+                <td>{{ advertisement.title }}</td>
+                <td>{{ advertisement.description }}</td>
+                <td>{% if advertisement.createdat %}{{ advertisement.createdat|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if advertisement.expirationdate %}{{ advertisement.expirationdate|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('advertisement_show', { 'id': advertisement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('advertisement_edit', { 'id': advertisement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('advertisement_new') }}">Create a new advertisement</a>
+        </li>
+    </ul>
+{% endblock %}

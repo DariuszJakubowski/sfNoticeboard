@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Advertisement</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ advertisement.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ advertisement.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ advertisement.description }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{% if advertisement.createdat %}{{ advertisement.createdat|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Expiration_date</th>
+                <td>{% if advertisement.expirationdate %}{{ advertisement.expirationdate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('advertisement_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('advertisement_edit', { 'id': advertisement.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -40,7 +40,7 @@ class Picture
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -63,7 +63,7 @@ class Picture
     /**
      * Get path
      *
-     * @return string 
+     * @return string
      */
     public function getPath()
     {
@@ -86,7 +86,7 @@ class Picture
     /**
      * Get adevrtisement
      *
-     * @return \AppBundle\Entity\Advertisement 
+     * @return \AppBundle\Entity\Advertisement
      */
     public function getAdevrtisement()
     {
@@ -109,7 +109,7 @@ class Picture
     /**
      * Get advertisement
      *
-     * @return \AppBundle\Entity\Advertisement 
+     * @return \AppBundle\Entity\Advertisement
      */
     public function getAdvertisement()
     {
